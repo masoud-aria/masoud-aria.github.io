@@ -162,3 +162,137 @@ body.page-classic .film-category-card{--accent:#f2d48c} body.page-new .film-cate
 @media (max-width:900px){.hero{grid-template-columns:1fr;text-align:center}.hero-copy{padding:5px}.hero p{margin-inline:auto}.glass-grid{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:520px){.page{width:94%;padding-top:10px}.topbar{top:6px}.glass-grid{gap:11px}.glass-btn{min-height:125px;border-radius:18px}.glass-btn i{font-size:25px}.glass-btn span{font-size:13px}.portrait-frame{width:270px}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+
+/* =========================================================
+   VERSION 70 — PRECISION METAL KEYCAP / REALISTIC GLASS
+   ========================================================= */
+:root{
+  --metal-hi:#ffffff;
+  --metal-mid:#dfe5e8;
+  --metal-low:#9ba5aa;
+  --gold-hi:#fff4b7;
+  --gold-mid:#e5b84f;
+  --gold-low:#9a6815;
+}
+
+/* Richer, non-flat atmospheres: each page remains related to jade but has its own visual composition. */
+body:not(.page-about){
+  background-color:#083f3a;
+  background-image:
+    radial-gradient(ellipse at 15% 8%, color-mix(in srgb,var(--tint) 90%,transparent), transparent 34%),
+    radial-gradient(ellipse at 86% 18%, rgba(255,255,255,.12), transparent 30%),
+    radial-gradient(ellipse at 35% 78%, rgba(0,45,40,.20), transparent 36%),
+    radial-gradient(ellipse at 90% 88%, rgba(255,255,255,.09), transparent 28%),
+    linear-gradient(138deg,#063d38 0%,#087f70 38%,#18aa91 68%,#0b655b 100%);
+}
+body:not(.page-about)::before{
+  background:
+    radial-gradient(ellipse at 20% 24%,rgba(255,255,255,.10),transparent 22%),
+    radial-gradient(ellipse at 72% 72%,rgba(255,255,255,.065),transparent 27%),
+    repeating-linear-gradient(168deg,transparent 0 85px,rgba(255,255,255,.026) 86px,transparent 88px),
+    linear-gradient(112deg,transparent 0 35%,rgba(255,255,255,.035) 36%,transparent 48%,rgba(0,0,0,.035) 49%,transparent 68%);
+  opacity:1;
+}
+body.page-poems{background-image:radial-gradient(ellipse at 12% 18%,rgba(126,255,220,.22),transparent 30%),radial-gradient(ellipse at 82% 78%,rgba(111,255,212,.12),transparent 32%),linear-gradient(135deg,#06453e,#159e86 54%,#55d6b1)}
+body.page-articles{background-image:radial-gradient(ellipse at 80% 12%,rgba(219,255,205,.20),transparent 28%),radial-gradient(ellipse at 18% 78%,rgba(114,214,155,.13),transparent 32%),linear-gradient(145deg,#073d37,#178e72 50%,#75c991)}
+body.page-stories{background-image:radial-gradient(ellipse at 16% 15%,rgba(90,238,225,.20),transparent 29%),radial-gradient(ellipse at 80% 84%,rgba(49,177,189,.15),transparent 30%),linear-gradient(135deg,#063b3d,#087d7c 50%,#39b7a7)}
+body.page-criticism{background-image:radial-gradient(ellipse at 78% 16%,rgba(126,237,201,.17),transparent 28%),radial-gradient(ellipse at 20% 82%,rgba(5,63,58,.24),transparent 34%),linear-gradient(145deg,#053a36,#087467 55%,#168f78)}
+body.page-photos{background-image:radial-gradient(ellipse at 16% 12%,rgba(122,255,255,.20),transparent 30%),radial-gradient(ellipse at 86% 82%,rgba(71,189,207,.15),transparent 30%),linear-gradient(140deg,#063c42,#087b80 52%,#3dbdb1)}
+body.page-music{background-image:radial-gradient(ellipse at 82% 15%,rgba(121,255,223,.18),transparent 29%),radial-gradient(ellipse at 20% 80%,rgba(50,168,167,.14),transparent 30%),linear-gradient(145deg,#063d3a,#087a70 48%,#36b9a0)}
+body.page-films{background-image:radial-gradient(ellipse at 18% 12%,rgba(115,227,199,.16),transparent 28%),radial-gradient(ellipse at 82% 82%,rgba(0,36,40,.22),transparent 34%),linear-gradient(145deg,#052f30,#075e5b 48%,#168d78)}
+
+/* Biography: crow-black lacquer + luminous gold, intentionally distinct. */
+body.page-about{
+  color:#fffdf2;
+  background:
+    radial-gradient(ellipse at 78% 10%,rgba(255,214,93,.20),transparent 26%),
+    radial-gradient(ellipse at 15% 76%,rgba(255,186,45,.10),transparent 30%),
+    linear-gradient(145deg,#030506 0%,#101313 46%,#050606 100%);
+}
+body.page-about::before{
+  background:
+    radial-gradient(ellipse at 52% 28%,rgba(255,236,151,.055),transparent 30%),
+    repeating-linear-gradient(124deg,transparent 0 90px,rgba(255,220,100,.025) 91px,transparent 94px),
+    linear-gradient(115deg,transparent 0 42%,rgba(255,255,255,.035) 43%,transparent 49%);
+}
+body.page-about .topbar,body.page-about .content-card{border-color:rgba(255,220,110,.28);background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(255,211,82,.045),rgba(0,0,0,.35));box-shadow:0 24px 65px rgba(0,0,0,.55),inset 0 1px rgba(255,245,190,.20)}
+body.page-about .section-title .number,body.page-about .kicker{color:#f5d878}
+body.page-about .section-title h1,body.page-about .section-title h2{color:#fff1ad;text-shadow:0 2px 0 #6e4910,0 5px 18px rgba(255,204,80,.22)}
+body.page-about .content-card h3{color:#fff0ae;text-shadow:0 2px 0 #65420c}
+body.page-about .content-card p,body.page-about .content-card{color:#e9e5d6}
+body.page-about .quote{border-color:rgba(255,215,96,.30);background:linear-gradient(135deg,rgba(255,216,91,.09),rgba(255,255,255,.025));color:#ffe9a0;box-shadow:inset 0 1px rgba(255,245,190,.20),0 12px 30px rgba(0,0,0,.35)}
+
+/* Real laptop-style metal keycaps. They are raised, beveled and optically separated from the theme. */
+.glass-btn,.glass-nav-btn,.social{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.92);
+  background:
+    linear-gradient(150deg,rgba(255,255,255,.98) 0%,rgba(236,240,242,.94) 14%,rgba(190,199,203,.96) 43%,rgba(238,241,242,.96) 69%,rgba(126,137,143,.98) 100%);
+  color:#ffffff;
+  box-shadow:
+    inset 0 2px 0 rgba(255,255,255,.98),
+    inset 0 0 0 1px rgba(255,255,255,.55),
+    inset 0 -10px 18px rgba(62,71,77,.34),
+    inset 5px 0 11px rgba(255,255,255,.30),
+    inset -6px 0 12px rgba(57,66,71,.20),
+    0 4px 0 #7b858a,
+    0 6px 0 #626c71,
+    0 17px 30px rgba(0,0,0,.25),
+    0 27px 55px rgba(0,0,0,.13);
+  transform:translateZ(0);
+}
+.glass-btn::before,.glass-nav-btn::before,.social::before{
+  content:"";position:absolute;inset:4px;border-radius:inherit;pointer-events:none;z-index:-1;
+  background:
+    linear-gradient(105deg,rgba(255,255,255,.70),transparent 16%,transparent 62%,rgba(255,255,255,.24)),
+    linear-gradient(180deg,rgba(255,255,255,.28),transparent 38%,rgba(55,65,70,.10));
+  box-shadow:inset 0 1px rgba(255,255,255,.96),inset 0 -1px rgba(55,64,69,.18);
+}
+.glass-btn::after,.glass-nav-btn::after,.social::after{
+  content:"";position:absolute;pointer-events:none;z-index:3;top:-45%;left:-65%;width:42%;height:190%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.92),transparent);
+  filter:blur(3px);transform:rotate(19deg);opacity:.0;animation:metalSweep 6.8s ease-in-out infinite;
+}
+.glass-btn i,.social i{color:#fbfdff;text-shadow:0 2px 0 #6c7579,0 4px 7px rgba(0,0,0,.30),0 0 12px rgba(255,255,255,.45);transform:translateZ(24px);filter:drop-shadow(0 1px 0 #fff)}
+.glass-btn span,.social span,.glass-nav-btn{color:var(--gold-hi);text-shadow:0 1px 0 #fff8cf,0 2px 0 #a46f12,0 4px 5px rgba(52,34,4,.52),0 0 13px rgba(255,210,72,.26);}
+.glass-btn span{transform:translateZ(26px);font-weight:900;letter-spacing:.01em}
+.glass-btn:hover,.social:hover{transform:translateY(-7px) rotateX(2deg) scale(1.012);box-shadow:inset 0 2px 0 #fff,inset 0 -10px 18px rgba(55,64,69,.28),0 5px 0 #7b858a,0 7px 0 #626c71,0 23px 42px rgba(0,0,0,.27),0 0 26px rgba(255,220,110,.18)}
+.glass-btn.pressed,.social.pressed,.glass-nav-btn.pressed{transform:translateY(6px) scale(.968) rotateX(-2deg);box-shadow:inset 0 11px 24px rgba(38,46,51,.36),inset 0 2px rgba(255,255,255,.55),0 1px 0 #707a7f,0 5px 11px rgba(0,0,0,.18)}
+.glass-btn.shatter,.glass-nav-btn.shatter,.social.shatter{animation:keycapImpact .82s cubic-bezier(.18,.72,.24,1)}
+
+/* SVG crack network is generated per press by JS; these rules make it read as fractured glass rather than a flat overlay. */
+.crack-svg{position:absolute;inset:-1px;width:calc(100% + 2px);height:calc(100% + 2px);z-index:8;pointer-events:none;overflow:visible;filter:drop-shadow(0 0 2px rgba(255,255,255,.95)) drop-shadow(0 1px 1px rgba(55,65,70,.45));animation:crackBloom .82s cubic-bezier(.2,.7,.2,1) forwards}
+.crack-main{fill:none;stroke:rgba(255,255,255,.96);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.crack-ghost{fill:none;stroke:rgba(86,98,104,.55);stroke-width:2.7;stroke-linecap:round;stroke-linejoin:round}
+.crack-fine{fill:none;stroke:rgba(255,255,255,.72);stroke-width:.72;stroke-linecap:round}
+.crack-node{fill:rgba(255,255,255,.82);filter:blur(.3px)}
+@keyframes crackBloom{0%{opacity:0;transform:scale(.72)}12%{opacity:1;transform:scale(.93)}36%{opacity:1;transform:scale(1)}76%{opacity:1}100%{opacity:0;transform:scale(1.015)}}
+@keyframes keycapImpact{0%{transform:translateY(0)}13%{transform:translateY(7px) scale(.966)}34%{transform:translateY(4px) scale(.978)}100%{transform:translateY(0)}}
+@keyframes metalSweep{0%,58%{transform:translateX(0) rotate(19deg);opacity:0}66%{opacity:.85}82%{transform:translateX(440%) rotate(19deg);opacity:.05}100%{opacity:0}}
+
+/* Small navigation keycaps are physically thinner but use the same metal system. */
+.glass-nav-btn{height:46px;border-radius:13px;box-shadow:inset 0 2px 0 #fff,inset 0 -7px 13px rgba(50,60,65,.28),0 3px 0 #737d82,0 5px 0 #5e686d,0 10px 18px rgba(0,0,0,.20)}
+.glass-nav-btn:hover{transform:translateY(-4px);box-shadow:inset 0 2px 0 #fff,inset 0 -7px 13px rgba(50,60,65,.22),0 4px 0 #737d82,0 6px 0 #5e686d,0 15px 26px rgba(0,0,0,.22)}
+.glass-nav-btn.pressed{transform:translateY(4px) scale(.95)}
+
+/* Softer visual motifs per page — waves, mist and directional light, not flat fills. */
+body.page-poems::after{background-image:radial-gradient(rgba(215,255,241,.26) .7px,transparent .8px),repeating-radial-gradient(ellipse at 20% 70%,transparent 0 45px,rgba(255,255,255,.028) 47px 49px,transparent 52px);background-size:28px 28px,100% 100%;opacity:.18}
+body.page-articles::after{background-image:linear-gradient(125deg,transparent 0 48%,rgba(255,255,255,.04) 49%,transparent 51%),radial-gradient(rgba(230,255,238,.22) .7px,transparent .8px);background-size:100% 100%,30px 30px;opacity:.16}
+body.page-stories::after{background-image:repeating-linear-gradient(160deg,transparent 0 70px,rgba(255,255,255,.028) 71px 74px,transparent 75px);opacity:.18}
+body.page-criticism::after{background-image:linear-gradient(90deg,transparent,rgba(255,255,255,.035),transparent),radial-gradient(rgba(210,255,239,.18) .6px,transparent .8px);background-size:100% 100%,24px 24px;opacity:.15}
+body.page-photos::after{background-image:radial-gradient(circle at 50% 50%,rgba(255,255,255,.12),transparent 38%),radial-gradient(rgba(215,255,255,.22) .7px,transparent .8px);background-size:100% 100%,26px 26px;opacity:.17}
+body.page-music::after{background-image:repeating-radial-gradient(ellipse at 10% 80%,transparent 0 36px,rgba(255,255,255,.028) 38px 40px,transparent 43px);opacity:.20}
+body.page-films::after{background-image:linear-gradient(115deg,transparent 0 43%,rgba(255,255,255,.035) 44%,transparent 47%),linear-gradient(65deg,transparent 0 57%,rgba(0,0,0,.035) 58%,transparent 62%);opacity:.18}
+body.page-about::after{background-image:radial-gradient(rgba(255,225,130,.13) .7px,transparent .8px);background-size:24px 24px;opacity:.11}
+
+/* Film categories retain distinct worlds, but now carry the same physical metal keycap language. */
+body.page-classic{background-image:radial-gradient(ellipse at 18% 12%,rgba(255,220,135,.20),transparent 30%),radial-gradient(ellipse at 84% 80%,rgba(44,61,55,.32),transparent 35%),linear-gradient(145deg,#1e302e,#52635c 52%,#a08b5a 100%)}
+body.page-new{background-image:radial-gradient(ellipse at 80% 14%,rgba(111,250,255,.24),transparent 29%),radial-gradient(ellipse at 20% 84%,rgba(11,85,96,.22),transparent 33%),linear-gradient(145deg,#062d34,#087078 52%,#3ab5b1 100%)}
+body.page-historical{background-image:radial-gradient(ellipse at 22% 13%,rgba(238,198,119,.22),transparent 31%),radial-gradient(ellipse at 82% 82%,rgba(47,31,19,.24),transparent 33%),linear-gradient(145deg,#30231a,#67503b 53%,#927958 100%)}
+body.page-cultural{background-image:radial-gradient(ellipse at 82% 16%,rgba(180,245,207,.20),transparent 29%),radial-gradient(ellipse at 15% 82%,rgba(24,86,68,.20),transparent 33%),linear-gradient(145deg,#103933,#27755f 54%,#68a887 100%)}
+body.page-artistic{background-image:radial-gradient(ellipse at 18% 13%,rgba(235,193,255,.20),transparent 31%),radial-gradient(ellipse at 82% 80%,rgba(32,22,48,.28),transparent 34%),linear-gradient(145deg,#211a31,#4b3a67 53%,#80658e 100%)}
+
+@media (max-width:900px){.glass-btn{min-height:146px}}
+@media (max-width:520px){.glass-btn{min-height:124px;border-radius:18px}.glass-btn::before{inset:3px}.glass-btn span{font-size:13px}.glass-nav-btn{height:43px}}
